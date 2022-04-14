@@ -100,19 +100,20 @@ public class Problem2 {
         System.out.println();
 
         System.out.print("Highest temps: ");
+        String temp = "";
         for (Integer i : highest) {
-            System.out.print(i + ", ");
+            temp = i + ", " + temp;
         }
-        System.out.println();
+        System.out.println(temp);
 
         System.out.println(
-                "Biggest temp difference: " + highestIntervalDifference + " betweem minutes " + highestIntervalStart
+                "Biggest temp difference: " + highestIntervalDifference + " between minutes " + highestIntervalStart
                         + " and "
                         + highestIntervalEnd);
     }
 
     public static class MyRunner implements Runnable {
-        public static final int lowestTemp = -70, highestTemp = 100;
+        public static final int lowestTemp = -100, highestTemp = 70;
 
         public ConcurrentSkipListSet<Reading> list;
         public int minute;

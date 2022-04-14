@@ -1,3 +1,10 @@
+/*
+Report on efficiency, correctness, and progress:
+    All concurrent operations are done without any locks or atomics. 
+    Optimized Java data structures are used to store data. Thus, as a whole, this implementation is quite efficient. Correctness is ensured since threads are given a range of temperatures to choose from, and the shared object we use (ConcurrentSkipList) is thread safe. 
+    The program is starvation and deadlock free as there are no dependencies between threads.
+*/
+
 package src;
 
 import java.util.ArrayList;

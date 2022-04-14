@@ -1,4 +1,4 @@
-package mypack;
+package src;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
